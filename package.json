@@ -8,8 +8,10 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.21.4",
     "bootstrap-vue": "^2.9.0",
     "core-js": "^3.6.4",
+    "sprint": "^0.3.1",
     "vue": "^2.6.11",
     "vuedraggable": "^2.23.2"
   },
