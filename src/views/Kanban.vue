@@ -14,6 +14,7 @@
     </div>
     <div class="row mt-5">
       <div class="col-3">
+        {{user.name}}
         <div class="p-2 alert alert-secondary">
           <h3>Back Log</h3>
           <!-- Backlog draggable component. Pass arrBackLog to list prop -->
@@ -99,6 +100,7 @@
 <script>
 //import draggable
 import draggable from "vuedraggable";
+import { mapGetters } from 'vuex';
 
 export default {
   name: "kanban-board",
@@ -121,6 +123,11 @@ export default {
       arrTested: [],
       arrDone: []
     };
+  },
+  computed: {
+    ...mapGetters({
+      user: "auth/getUser"
+    })
   },
   methods: {
     //add new tasks method
