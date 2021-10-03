@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand :to="{ name: 'home' }">API Example</b-navbar-brand>
+      <b-navbar-brand :to="{ name: 'dashboard' }">SPUREN</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -41,7 +41,7 @@ export default {
     submit() {
       this.logout();
       this.$router.replace({
-        name: "home",
+        name: "login",
       });
     },
   },

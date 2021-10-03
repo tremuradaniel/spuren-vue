@@ -56,7 +56,7 @@ export default {
     async submit() {
       await this.login(this.form).finally(() => {
         this.$router.replace({
-          name: "kanban",
+          name: "dashboard",
         });
       });
     },

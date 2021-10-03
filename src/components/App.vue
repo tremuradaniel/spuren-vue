@@ -2,6 +2,7 @@
   <div>
      <b-overlay :show="isLoading">
       <navbar />
+      <sidebar v-if="isAuthenticated" />
       <b-container>
         <router-view />
       </b-container>
@@ -12,16 +13,20 @@
 <script>
 
 import Navbar from './Navbar.vue'
+import Sidebar from './Sidebar.vue'
+
 import { mapGetters } from "vuex";
 
 export default {
   name: "App",
   components: {
-    "navbar": Navbar
+    "navbar": Navbar,
+    "sidebar": Sidebar,
   },
   computed: {
     ...mapGetters({
       isLoading: "getLoading",
+      isAuthenticated: "auth/isAuthenticated",
     }),
   }
 };

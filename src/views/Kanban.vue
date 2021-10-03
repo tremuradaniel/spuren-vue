@@ -14,7 +14,6 @@
     </div>
     <div class="row mt-5">
       <div class="col-3">
-        {{user.name}}
         <div class="p-2 alert alert-secondary">
           <h3>Back Log</h3>
           <!-- Backlog draggable component. Pass arrBackLog to list prop -->

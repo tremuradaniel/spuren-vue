@@ -1,19 +1,17 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import axios from 'axios'
+import sprint from 'sprint'
 import router from './router/main'
 import store from './store/main'
 import App from './components/App.vue'
-import sprint from 'sprint'
+import './main.css'
+import svgMix from './mixins/svgMix'
 
 // Import Bootstrap Vue
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-
-
-// mixins
-import apiMix from './mixins/apiMix'
-import axios from 'axios'
 
 Vue.config.productionTip = false
 
@@ -37,6 +35,6 @@ require('./store/subscriber')
 new Vue({
   store,
   router,
-  mixins: [apiMix],
+  mixins: ['svgMix'],
   render: h => h(App),
 }).$mount('#app')

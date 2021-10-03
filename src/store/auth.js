@@ -45,14 +45,12 @@ export default {
       }
 
       try{
-        debugger
         let response = await axios.get('/profile')
         commit('setUser', JSON.parse(response.data))
       }catch(e){
         commit('setUser', null)
         commit('setToken', null)
       }
-      debugger
       store.commit('setLoading', false)
     },
     async register(_, form){
